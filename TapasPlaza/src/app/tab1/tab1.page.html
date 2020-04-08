@@ -13,5 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <!-- Slides photos carrousel -->
+    <div class="carrousel-photos">
+      <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
+        <ion-slide *ngFor="let imageurl of imageLinks">
+          <img src={{imageurl}}/>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+  </ion-grid>
+
 </ion-content>
+
+
