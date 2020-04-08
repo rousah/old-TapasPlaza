@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {IonSlides} from '@ionic/angular'
+import {IonSlides} from '@ionic/angular';
+import { IonButton, IonIcon, IonContent } from '@ionic/react';
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -18,7 +20,8 @@ export class Tab1Page {
     initialSlide: 0,
     speed: 400,
     autoplay: true,
-    loop: true
+    loop: true,
+    setWrapperSize: true
   };
 
   constructor() { 

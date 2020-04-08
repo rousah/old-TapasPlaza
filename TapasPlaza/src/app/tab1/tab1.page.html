@@ -14,13 +14,66 @@
   </ion-header>
 
   <ion-grid>
-    <!-- Slides photos carrousel -->
-    <div class="carrousel-photos">
-      <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
-        <ion-slide *ngFor="let imageurl of imageLinks">
-          <img src={{imageurl}}/>
-        </ion-slide>
-      </ion-slides>
+    Welcome!
+    <div>
+      <!-- OUR RESTAURANT -->
+      <ion-card>
+        <!-- Slides photos carrousel -->
+        <div class="carrousel-photos">
+          <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
+            <ion-slide *ngFor="let imageurl of imageLinks">
+              <img src={{imageurl}}/>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <ion-card-header>
+          <ion-card-title>Our Restaurant</ion-card-title>
+          <ion-card-subtitle>Playa Burriana, Nerja</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+      </ion-card>
+
+      <!-- ORDER NOW -->
+      <div class="ion-padding">
+        <ion-button expand="block">See menu & order now!</ion-button>
+      </div>
+
+
+      <!-- ABOUT US -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>About Us</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+      </ion-card>
+
+
+      <!-- OUR FOOD -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Our Food</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+      </ion-card>
+
+
+      <!-- HOURS -->
+      <!-- SOCIAL MEDIA -->
+
     </div>
 
   </ion-grid>
