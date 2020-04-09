@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {IonSlides} from '@ionic/angular';
-import { IonButton, IonIcon, IonContent } from '@ionic/react';
+import {NavController} from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -9,6 +10,7 @@ import { IonButton, IonIcon, IonContent } from '@ionic/react';
 })
 
 export class Tab1Page {
+  public devWidth = this.platform.width();
 
   public imageLinks = [
     "./assets/images/slide1.jpg",
@@ -24,13 +26,15 @@ export class Tab1Page {
     setWrapperSize: true
   };
 
-  constructor() { 
+  constructor(private navctrl: NavController, private platform: Platform) { 
     console.log("Home tab created")
-    console.log(this.imageLinks)
   }
 
   public slidesDidLoad(slides: IonSlides) {
     slides.startAutoplay();
   }
 
+  public order() {
+    this.navctrl.navigateForward('/tabs/tab2')
+  }
 }
