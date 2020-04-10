@@ -7,6 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <section class="headerimg" [hidden]="devWidth < 992">
+    <div>
+      <ion-text color="light">
+        <h1>
+          Tapas Plaza
+        </h1>
+        <h3>Vestibulum eleifend lorem nec neque interdum varius.</h3>
+        <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
+      </ion-text>
+    </div>
+  </section>
   <ion-grid fixed class="content">
     <ion-header collapse="condense" [hidden]="devWidth > 992">
       <ion-toolbar>
@@ -15,19 +26,10 @@
     </ion-header>
 
     <!-- INTRO -->
-    <section class="headerimg" [hidden]="devWidth < 992">
-      <div>
-        <ion-text color="light">
-          <h1>
-            Tapas Plaza
-          </h1>
-          <h3>Vestibulum eleifend lorem nec neque interdum varius.</h3>
-          <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
-        </ion-text>
-      </div>
-    </section>
+
 
     <!-- OUR RESTAURANT -->
+    <!-- Desktop -->
     <ion-grid [hidden]="devWidth < 992">
       <h1>Our Restaurant</h1>
       <ion-row>
@@ -37,7 +39,7 @@
       </ion-row>
     </ion-grid>
 
-
+    <!-- Mobile -->
     <ion-card [hidden]="devWidth > 992">
       <!-- Slides photos carrousel -->
       <div class="carrousel-photos">
@@ -57,6 +59,8 @@
         and climb a mountain or spend a week in the woods. Wash your spirit clean.
       </ion-card-content>
     </ion-card>
+
+
     <!-- ORDER NOW -->
     <div class="ion-padding">
       <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
@@ -64,12 +68,28 @@
 
 
     <!-- ABOUT US -->
-    <ion-card>
+    <!-- Desktop -->
+    <ion-grid [hidden]="devWidth < 992">
+      <h1>About Us</h1>
+      <ion-row>
+        <ion-col size="6">
+          <img src="../../assets/images/aboutus.jpg">
+        </ion-col>
+        <ion-col size="6">
+          <p>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Mobile -->
+    <ion-card [hidden]="devWidth > 992">
       <ion-card-header>
         <ion-card-title>About Us</ion-card-title>
         <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
       </ion-card-header>
-
       <ion-card-content>
         Keep close to Nature's heart... and break clear away, once in awhile,
         and climb a mountain or spend a week in the woods. Wash your spirit clean.
@@ -78,6 +98,13 @@
 
 
     <!-- OUR FOOD -->
+    <!-- Desktop -->
+    <ion-grid [hidden]="devWidth < 992">
+      <h1>Our Food</h1>
+      <ion-img src="../../assets/images/aboutus.jpg"></ion-img>
+    </ion-grid>
+
+    <!-- Mobile -->
     <ion-card>
       <ion-card-header>
         <ion-card-title>Our Food</ion-card-title>
