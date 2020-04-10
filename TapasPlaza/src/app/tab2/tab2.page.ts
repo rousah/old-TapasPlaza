@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TabsPage } from '../tabs/tabs.page'
+import { Platform } from '@ionic/angular'
 
 @Component({
   selector: 'app-tab2',
@@ -7,9 +7,17 @@ import { TabsPage } from '../tabs/tabs.page'
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor(
-    tabsPage: TabsPage
-  ) {}
+    desktop: boolean
+  
+    constructor(
+      private platform: Platform
+    ) {
+      if (this.platform.width() > 991) {
+        this.desktop = true
+      }
+      else {
+        this.desktop = false
+      }
+    }
 
 }

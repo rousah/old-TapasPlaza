@@ -8,11 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ModalOrderPageModule } from './modal-order/modal-order.module';
+import { Tab2PageModule } from './tab2/tab2.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ModalOrderPageModule, Tab2PageModule],
   providers: [
     StatusBar,
     SplashScreen,

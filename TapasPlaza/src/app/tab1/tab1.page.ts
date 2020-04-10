@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {IonSlides} from '@ionic/angular';
 import {NavController} from '@ionic/angular';
 import { Platform } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { Tab2Page } from '../tab2/tab2.page';
 
 @Component({
   selector: 'app-tab1',
@@ -26,7 +28,10 @@ export class Tab1Page {
     setWrapperSize: true
   };
 
-  constructor(private navctrl: NavController, private platform: Platform) { 
+  constructor(
+    private navctrl: NavController, 
+    private platform: Platform,
+    public modalController: ModalController) { 
     console.log("Home tab created")
   }
 
@@ -36,5 +41,12 @@ export class Tab1Page {
 
   public order() {
     this.navctrl.navigateForward('/tabs/tab2')
+  }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: Tab2Page
+    });
+    return await modal.present();
   }
 }

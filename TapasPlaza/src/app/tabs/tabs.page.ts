@@ -15,11 +15,9 @@ export class TabsPage {
   ) {
     if (this.platform.width() > 991) {
       this.desktop = true
-      console.log("top")
     }
     else {
       this.desktop = false
-      console.log("bottom")
     }
   }
 }

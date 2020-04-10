@@ -1,0 +1,4 @@
+In app.module.ts:
+1. import modules and NOT the components or services
+2. declare components and NOT the modules or services.
+3. provide services and NOT components or modules.
