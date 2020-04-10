@@ -14,20 +14,30 @@
   </ion-header>
 
   <!-- INTRO -->
-    <section class="headerimg" [hidden]="devWidth < 992">
-      <div>
-        <ion-text color="light">
-          <h1>
-            Tapas Plaza
-          </h1>
-          <h3>Vestibulum eleifend lorem nec neque interdum varius.</h3>
-          <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
-        </ion-text>
-      </div>
-    </section>
+  <section class="headerimg" [hidden]="devWidth < 992">
+    <div>
+      <ion-text color="light">
+        <h1>
+          Tapas Plaza
+        </h1>
+        <h3>Vestibulum eleifend lorem nec neque interdum varius.</h3>
+        <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
+      </ion-text>
+    </div>
+  </section>
 
   <!-- OUR RESTAURANT -->
-  <ion-card>
+  <ion-grid [hidden]="devWidth < 992">
+    <h1>Our Restaurant</h1>
+    <ion-row>
+        <ion-col size="4" *ngFor="let imageurl of imageLinks">
+          <img src={{imageurl}} />
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-card [hidden]="devWidth > 992">
     <!-- Slides photos carrousel -->
     <div class="carrousel-photos">
       <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
