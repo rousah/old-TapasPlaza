@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Platform } from '@ionic/angular';
 
-@Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+@Injectable({
+  providedIn: 'root'
 })
 
-export class TabsPage {
-  desktop: boolean
+export class CurrentPlatformService {
+  public desktop: boolean
 
   constructor(
     private platform: Platform
