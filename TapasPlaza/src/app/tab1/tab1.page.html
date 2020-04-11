@@ -7,6 +7,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- INTRO -->
+  <!-- Desktop only -->
   <section class="headerimg" [hidden]="devWidth < 992">
     <div>
       <ion-text color="light">
@@ -18,6 +20,7 @@
       </ion-text>
     </div>
   </section>
+
   <ion-grid fixed class="content">
     <ion-header collapse="condense" [hidden]="devWidth > 992">
       <ion-toolbar>
@@ -25,42 +28,28 @@
       </ion-toolbar>
     </ion-header>
 
-    <!-- INTRO -->
-
-
     <!-- OUR RESTAURANT -->
-    <!-- Desktop -->
-    <ion-grid [hidden]="devWidth < 992">
+    <ion-grid>
       <h1>Our Restaurant</h1>
-      <ion-row>
-        <ion-col size="4" *ngFor="let imageurl of imageLinks">
+
+      <!-- Desktop -->
+      <ion-row >
+        <ion-col size-lg="4" *ngFor="let imageurl of imageLinks" [hidden]="devWidth < 992">
           <img src={{imageurl}} />
         </ion-col>
+        <ion-col [hidden]="devWidth > 992">
+          <!-- Mobile -->
+          <div class="carrousel-photos">
+            <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
+              <ion-slide *ngFor="let imageurl of imageLinks">
+                <img src={{imageurl}} />
+              </ion-slide>
+            </ion-slides>
+          </div>
+        </ion-col>
       </ion-row>
+
     </ion-grid>
-
-    <!-- Mobile -->
-    <ion-card [hidden]="devWidth > 992">
-      <!-- Slides photos carrousel -->
-      <div class="carrousel-photos">
-        <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
-          <ion-slide *ngFor="let imageurl of imageLinks">
-            <img src={{imageurl}} />
-          </ion-slide>
-        </ion-slides>
-      </div>
-      <ion-card-header>
-        <ion-card-title>Our Restaurant</ion-card-title>
-        <ion-card-subtitle>Playa Burriana, Nerja</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </ion-card-content>
-    </ion-card>
-
-
     <!-- ORDER NOW -->
     <div class="ion-padding" [hidden]="devWidth > 992">
       <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
@@ -68,14 +57,14 @@
 
 
     <!-- ABOUT US -->
-    <!-- Desktop -->
-    <ion-grid [hidden]="devWidth < 992">
+    <!-- Desktop & mobile -->
+    <ion-grid>
       <h1>About Us</h1>
       <ion-row>
-        <ion-col size="6">
+        <ion-col size-lg="6">
           <img src="../../assets/images/aboutus.jpg">
         </ion-col>
-        <ion-col size="6">
+        <ion-col size-lg="6">
           <p>
             Keep close to Nature's heart... and break clear away, once in awhile,
             and climb a mountain or spend a week in the woods. Wash your spirit clean.
@@ -84,51 +73,24 @@
       </ion-row>
     </ion-grid>
 
-    <!-- Mobile -->
-    <ion-card [hidden]="devWidth > 992">
-      <ion-card-header>
-        <ion-card-title>About Us</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </ion-card-content>
-    </ion-card>
-
-
     <!-- OUR FOOD -->
-    <!-- Desktop -->
-    <ion-grid [hidden]="devWidth < 992">
+    <!-- Desktop & mobile -->
+    <ion-grid>
       <h1>Our Food</h1>
       <ion-row *ngFor="let foodItem of foodImages">
-        <ion-col size="6">
+        <ion-col size-lg="6" size-xs="12">
           <div class="foodImageItem">
             <ion-img src="{{foodItem[0]}}"></ion-img>
-            <div class="overlay">
+            <div class="overlay" [hidden]="devWidth < 992">
               <h3>{{foodItem[1]}}</h3>
             </div>
           </div>
         </ion-col>
-        <ion-col size="6">
+        <ion-col size-lg="6" size-xs="12">
           {{foodItem[1]}}
         </ion-col>
       </ion-row>
     </ion-grid>
-
-    <!-- Mobile -->
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Our Food</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
-
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </ion-card-content>
-    </ion-card>
-
 
     <!-- HOURS -->
     <!-- SOCIAL MEDIA -->
