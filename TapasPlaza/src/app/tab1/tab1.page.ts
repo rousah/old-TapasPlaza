@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {IonSlides} from '@ionic/angular';
-import {NavController} from '@ionic/angular';
+import { IonSlides } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { Tab2Page } from '../tab2/tab2.page';
@@ -20,6 +20,26 @@ export class Tab1Page {
     "./assets/images/slide3.jpg",
   ]
 
+  foodImages = [["./assets/images/food1.jpg",
+    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
+    "Gambas PilPil"
+  ],
+  ["./assets/images/food2.jpg",
+    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
+    "Gambas PilPil"
+  ],
+  ["./assets/images/food3.jpg",
+    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
+    "Gambas PilPil"
+  ]
+  ]
+
+  public foodTexts = [
+    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
+    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
+    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
+  ]
+
   slideOptions = {
     initialSlide: 0,
     speed: 400,
@@ -29,9 +49,9 @@ export class Tab1Page {
   };
 
   constructor(
-    private navctrl: NavController, 
+    private navctrl: NavController,
     private platform: Platform,
-    public modalController: ModalController) { 
+    public modalController: ModalController) {
     console.log("Home tab created")
   }
 

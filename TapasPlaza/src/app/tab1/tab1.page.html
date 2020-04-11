@@ -62,7 +62,7 @@
 
 
     <!-- ORDER NOW -->
-    <div class="ion-padding">
+    <div class="ion-padding" [hidden]="devWidth > 992">
       <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
     </div>
 
@@ -101,7 +101,19 @@
     <!-- Desktop -->
     <ion-grid [hidden]="devWidth < 992">
       <h1>Our Food</h1>
-      <ion-img src="../../assets/images/aboutus.jpg"></ion-img>
+      <ion-row *ngFor="let foodItem of foodImages">
+        <ion-col size="6">
+          <div class="foodImageItem">
+            <ion-img src="{{foodItem[0]}}"></ion-img>
+            <div class="overlay">
+              <h3>{{foodItem[1]}}</h3>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          {{foodItem[1]}}
+        </ion-col>
+      </ion-row>
     </ion-grid>
 
     <!-- Mobile -->
