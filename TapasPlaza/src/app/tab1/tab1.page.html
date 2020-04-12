@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <!-- INTRO -->
   <!-- Desktop only -->
-  <section class="headerimg" [hidden]="devWidth < 992">
+  <section class="headerimg section" [hidden]="devWidth < 992">
     <div>
       <ion-text color="light">
         <h1>
@@ -29,11 +29,11 @@
     </ion-header>
 
     <!-- OUR RESTAURANT -->
-    <ion-grid>
+    <ion-grid class="section">
       <h1>Our Restaurant</h1>
 
       <!-- Desktop -->
-      <ion-row >
+      <ion-row>
         <ion-col size-lg="4" *ngFor="let imageurl of imageLinks" [hidden]="devWidth < 992">
           <img src={{imageurl}} />
         </ion-col>
@@ -51,20 +51,20 @@
 
     </ion-grid>
     <!-- ORDER NOW -->
-    <div class="ion-padding" [hidden]="devWidth > 992">
+    <div class="ion-padding section" [hidden]="devWidth > 992">
       <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
     </div>
 
 
     <!-- ABOUT US -->
     <!-- Desktop & mobile -->
-    <ion-grid>
+    <ion-grid class="section">
       <h1>About Us</h1>
       <ion-row>
-        <ion-col size-lg="6">
-          <img src="../../assets/images/aboutus.jpg">
+        <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
+          <img src="../../assets/images/aboutus.jpg" class="about-us-img">
         </ion-col>
-        <ion-col size-lg="6">
+        <ion-col size-md="6" size-xs="12">
           <p>
             Keep close to Nature's heart... and break clear away, once in awhile,
             and climb a mountain or spend a week in the woods. Wash your spirit clean.
@@ -75,25 +75,40 @@
 
     <!-- OUR FOOD -->
     <!-- Desktop & mobile -->
-    <ion-grid>
+    <ion-grid class="section">
       <h1>Our Food</h1>
       <ion-row *ngFor="let foodItem of foodImages">
         <ion-col size-lg="6" size-xs="12">
-          <div class="foodImageItem">
-            <ion-img src="{{foodItem[0]}}"></ion-img>
-            <div class="overlay" [hidden]="devWidth < 992">
-              <h3>{{foodItem[1]}}</h3>
-            </div>
-          </div>
+          {{foodItem[1]}}
         </ion-col>
         <ion-col size-lg="6" size-xs="12">
-          {{foodItem[1]}}
+          <div class="foodImageItem">
+            <div style="align-items: center; display: flex; justify-content: center;">
+              <ion-img src="{{foodItem[0]}}" style="width: 70%; height: auto;"></ion-img>
+              <div class="overlay" [hidden]="devWidth < 992">
+                <h3>{{foodItem[1]}}</h3>
+              </div>
+            </div>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
 
     <!-- HOURS -->
-    <!-- SOCIAL MEDIA -->
+    <h1>Opening Hours</h1>
+
+    <!-- WHERE TO FIND US -->
+    <h1>Where to find us</h1>
 
   </ion-grid>
+
+  <!-- Footer  -->
+  <!-- SOCIAL MEDIA -->
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar color="medium">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-google"></ion-icon>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
