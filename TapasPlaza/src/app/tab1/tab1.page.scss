@@ -26,6 +26,10 @@ h1 {
   text-align: center;
 }
 
+.map {
+  background-color: var(--ion-color-secondary);
+}
+
 @media (min-width: 992px) {
   ion-content {
     //--background: none;
@@ -56,7 +60,7 @@ h1 {
     color: white;
     visibility: hidden;
     opacity: 0;
-    
+
     //margin: 0.3rem;
     /* transition effect. not necessary */
     transition: opacity 0.2s, visibility 0.2s;
