@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" [hidden]="devWidth > 992">
   <ion-toolbar>
-    <ion-title>
+    <ion-title style="text-align: center;">
       Tapas Plaza
     </ion-title>
   </ion-toolbar>
@@ -37,8 +37,8 @@
         <ion-col size-lg="4" *ngFor="let imageurl of imageLinks" [hidden]="devWidth < 992">
           <img src={{imageurl}} />
         </ion-col>
+        <!-- Mobile -->
         <ion-col [hidden]="devWidth > 992">
-          <!-- Mobile -->
           <div class="carrousel-photos">
             <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
               <ion-slide *ngFor="let imageurl of imageLinks">
@@ -47,6 +47,20 @@
             </ion-slides>
           </div>
         </ion-col>
+        <p>
+        Expect a warm welcome
+        from Giovanni, Jeannette or Jaume, in this family business. We offer fresh Asian Food Specialties, Vegetarian,
+        Middle
+        Eastern and Mediterranean tapas! Chefs Choice Tapas platter, a Spanish Selection and an Asian mix. Babi Ketjap,
+        Sateh, Nasi, Quiche, Feta or Salads? We‘ve got it all! 
+      </p><p>
+        Don’t expect Fast Food, for even our burger is fresh from
+        scratch! Reserve a table or try your luck and have a foodie experience while watching the ☀️ pass by above the
+        sea, for we are only open when it shines! 
+      </p><p>
+        Have a drink and a bite on our open air terrace. You will not regret
+        it, add yourself to our extended client list.
+      </p>
       </ion-row>
 
     </ion-grid>
@@ -109,6 +123,7 @@
     <ion-toolbar color="medium">
       <ion-icon name="logo-facebook"></ion-icon>
       <ion-icon name="logo-google"></ion-icon>
+      Est. 2013
     </ion-toolbar>
   </ion-footer>
 </ion-content>

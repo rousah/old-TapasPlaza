@@ -235,3 +235,29 @@ $grid-breakpoints: (
   // Tablet vertical (768px - 991px)
     lg: 992px // Tablet horizontal, Desktop (992px and above),
 );
+
+@font-face {
+  font-family: 'American Typewriter Bold';
+  src: url('../assets/fonts/AmericanTypewriter-Bold-03.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'American Typewriter Normal';
+  src: url('../assets/fonts/AmericanTypewriter-01.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Chivo';
+  src: url('../assets/fonts/Andale\ Mono.ttf');
+  font-weight: normal;
+}
+
+h1 {
+  font-family: 'American Typewriter Bold';
+}
+
+* {
+  font-family: 'Chivo'
+}
