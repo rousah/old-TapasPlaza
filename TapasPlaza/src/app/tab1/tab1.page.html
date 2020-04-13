@@ -81,11 +81,23 @@
         <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
           <img src="../../assets/images/aboutus.jpg" class="about-us-img">
         </ion-col>
-        <ion-col size-md="6" size-xs="12">
-          <p>
-            Keep close to Nature's heart... and break clear away, once in awhile,
-            and climb a mountain or spend a week in the woods. Wash your spirit clean.
-          </p>
+        <ion-col size-md="6" size-xs="12"
+          style="align-items: center; display: flex; justify-content: center; text-align: center;">
+          <div>
+            <p>
+              We are Johan & Jeannette and have been running our restaurant since 2013, previously known as 'Sabor de
+              Amor'! We are Dutch but we like to call ourselves 'people of the Earth' because we have roots everywhere
+              and
+              love travelling and culture.
+            </p>
+            <p>
+              Before settling in Spain with our three children we lived in Thailand, which has given us our love and
+              taste for Thai and Asian dishes. Johan is a professional chef and has run big kitchens in Holland, now he
+              puts together the things he loves the most on a plate to share with everyone. Jeannette is an incredible
+              hostess; friendly and heartwarming - she also has a magical touch in the kitchen and baking cakes and
+              sweets. We would love to welcome you into what we call our Home.
+            </p>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -95,7 +107,8 @@
     <ion-grid class="section">
       <h1>Our Food</h1>
       <ion-row *ngFor="let foodItem of foodImages">
-        <ion-col size-lg="6" size-xs="12">
+        <ion-col size-lg="6" size-xs="12"
+          style="align-items: center; display: flex; justify-content: center; text-align: center;">
           {{foodItem[1]}}
         </ion-col>
         <ion-col size-lg="6" size-xs="12">
@@ -119,10 +132,13 @@
     <ion-grid class="section map">
       <ion-row>
         <!-- Map -->
-        <ion-col size-lg="6" size-xs="12">
+        <ion-col size-lg="6" size-xs="12" style="text-align: center;">
           <h1>Where to find us</h1>
-          <p style="text-align: center;">
+          <p>
             Paseo Burriana, Nerja
+          </p>
+          <p>
+            +34 665454431
           </p>
         </ion-col>
         <ion-col size-lg="6" size-xs="12">
@@ -139,10 +155,24 @@
   <!-- SOCIAL MEDIA -->
 
   <ion-footer class="ion-no-border">
-    <ion-toolbar color="medium" style="align-items: center; display: flex; justify-content: center; text-align: center;">
-      Est. 2013
-      <ion-icon name="logo-facebook"></ion-icon>
-      <ion-icon name="logo-google"></ion-icon>
+    <ion-toolbar color="medium"
+      style="align-items: center; display: flex; justify-content: center; text-align: center;">
+      <ion-button href="https://www.facebook.com/TapasPlazaNerja/" fill="clear" color="light">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+      <ion-button
+        href="https://www.google.com/maps/place/Tapas+Plaza/@36.7506407,-3.8698905,17z/data=!3m1!4b1!4m5!3m4!1s0xd7225088a46b057:0x6fcca143f528debd!8m2!3d36.7506407!4d-3.8677018"
+        fill="clear" color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-button>
+      <ion-button
+        href="https://www.tripadvisor.com/Restaurant_Review-g315917-d1477947-Reviews-Tapas_Plaza-Nerja_Costa_del_Sol_Province_of_Malaga_Andalucia.html"
+        fill="clear" color="light">
+        <img height="32" width="32" src="../../assets/icon/tripadvisor.svg"/>
+      </ion-button>
+      <p>
+        Est. 2013
+      </p>
     </ion-toolbar>
   </ion-footer>
 </ion-content>
