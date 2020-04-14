@@ -1,190 +1,196 @@
 <ion-header [translucent]="true" [hidden]="devWidth > 992">
   <ion-toolbar>
     <ion-title style="text-align: center;">
-      Tapas Plaza
+      <img src="../../assets/icon/tp-logo.png" style="padding: 1rem;">
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- INTRO -->
-  <!-- Desktop only -->
-  <section class="headerimg section" [hidden]="devWidth < 992">
-    <div>
-      <ion-text color="light">
-        <h1>
-          Tapas Plaza
-        </h1>
-        <br>
-        <h3>Vestibulum eleifend lorem nec neque interdum varius.</h3>
-        <br><br>
-        <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
-      </ion-text>
-    </div>
-  </section>
+  <div style="background-color: #eaf5f7 !important;">
 
-  <ion-grid fixed class="content">
-    <ion-header collapse="condense" [hidden]="devWidth > 992">
-      <ion-toolbar>
-        <ion-title size="large">Home</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <!-- INTRO -->
+    <!-- Desktop only -->
+    <section class="headerimg" [hidden]="devWidth < 992">
+      <div>
+        <ion-text color="light">
+          <h1 class="logo">
+            tapas plaza
+          </h1>
+          <br>
+          <h3>Vestibulum eleifend lorem nec neque interdum varius.</h3>
+          <br><br>
+          <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
+        </ion-text>
+      </div>
+    </section>
 
-    <!-- OUR RESTAURANT -->
-    <ion-grid class="section">
-      <h1>Our Restaurant</h1>
+    <ion-grid fixed class="content">
 
-      <!-- Desktop -->
-      <ion-row>
-        <ion-col size-lg="4" *ngFor="let imageurl of imageLinks" [hidden]="devWidth < 992">
-          <img src={{imageurl}} />
-        </ion-col>
-        <!-- Mobile -->
-        <ion-col [hidden]="devWidth > 992">
-          <div class="carrousel-photos">
-            <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
-              <ion-slide *ngFor="let imageurl of imageLinks">
-                <img src={{imageurl}} />
-              </ion-slide>
-            </ion-slides>
-          </div>
-        </ion-col>
-        <p>
-          Expect a warm welcome
-          from Giovanni, Jeannette or Jaume, in this family business. We offer fresh Asian Food Specialties, Vegetarian,
-          Middle
-          Eastern and Mediterranean tapas! Chefs Choice Tapas platter, a Spanish Selection and an Asian mix. Babi
-          Ketjap,
-          Sateh, Nasi, Quiche, Feta or Salads? We‘ve got it all!
-        </p>
-        <p>
-          Don’t expect Fast Food, for even our burger is fresh from
-          scratch! Reserve a table or try your luck and have a foodie experience while watching the ☀️ pass by above the
-          sea, for we are only open when it shines!
-        </p>
-        <p>
-          Have a drink and a bite on our open air terrace. You will not regret
-          it, add yourself to our extended client list.
-        </p>
-      </ion-row>
+      <!-- OUR RESTAURANT -->
+      <ion-grid class="section">
+        <h1>Our Restaurant</h1>
 
-    </ion-grid>
-    <!-- ORDER NOW -->
-    <div class="ion-padding section" [hidden]="devWidth > 992">
-      <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
-    </div>
+        <!-- Desktop -->
+        <ion-row>
+          <ion-col size-lg="4" *ngFor="let imageurl of imageLinks" [hidden]="devWidth < 992">
+            <img src={{imageurl}} />
+          </ion-col>
+          <!-- Mobile -->
+          <ion-col [hidden]="devWidth > 992">
+            <div class="carrousel-photos">
+              <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
+                <ion-slide *ngFor="let imageurl of imageLinks">
+                  <img src={{imageurl}} />
+                </ion-slide>
+              </ion-slides>
+            </div>
+          </ion-col>
+          <p>
+            Expect a warm welcome
+            from Giovanni, Jeannette or Jaume, in this family business. We offer fresh Asian Food Specialties,
+            Vegetarian,
+            Middle
+            Eastern and Mediterranean tapas! Chefs Choice Tapas platter, a Spanish Selection and an Asian mix. Babi
+            Ketjap,
+            Sateh, Nasi, Quiche, Feta or Salads? We‘ve got it all!
+          </p>
+          <p>
+            Don’t expect Fast Food, for even our burger is fresh from
+            scratch! Reserve a table or try your luck and have a foodie experience while watching the ☀️ pass by above
+            the
+            sea, for we are only open when it shines!
+          </p>
+          <p>
+            Have a drink and a bite on our open air terrace. You will not regret
+            it, add yourself to our extended client list.
+          </p>
+        </ion-row>
+
+      </ion-grid>
+      <!-- ORDER NOW -->
+      <div class="ion-padding" [hidden]="devWidth > 992">
+        <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
+      </div>
 
 
-    <!-- ABOUT US -->
-    <!-- Desktop & mobile -->
-    <ion-grid class="section">
-      <h1>About Us</h1>
-      <ion-row>
-        <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
-          <img src="../../assets/images/aboutus.jpg" class="about-us-img">
-        </ion-col>
-        <ion-col size-md="6" size-xs="12"
-          style="align-items: center; display: flex; justify-content: center; text-align: center;">
-          <div>
-            <p>
-              We are Johan & Jeannette and have been running our restaurant since 2013, previously known as 'Sabor de
-              Amor'! We are Dutch but we like to call ourselves 'people of the Earth' because we have roots everywhere
-              and
-              love travelling and culture.
-            </p>
-            <p>
-              Before settling in Spain with our three children we lived in Thailand, which has given us our love and
-              taste for Thai and Asian dishes. Johan is a professional chef and has run big kitchens in Holland, now he
-              puts together the things he loves the most on a plate to share with everyone. Jeannette is an incredible
-              hostess; friendly and heartwarming - she also has a magical touch in the kitchen and baking cakes and
-              sweets. We would love to welcome you into what we call our Home.
-            </p>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+      <!-- ABOUT US -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section">
+        <h1>About Us</h1>
+        <ion-row>
+          <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
+            <img src="../../assets/images/aboutus.jpg" class="about-us-img">
+          </ion-col>
+          <ion-col size-md="6" size-xs="12"
+            style="align-items: center; display: flex; justify-content: center; text-align: center;">
+            <div>
+              <p>
+                We are Johan & Jeannette and have been running our restaurant since 2013, previously known as 'Sabor de
+                Amor'! We are Dutch but we like to call ourselves 'people of the Earth' because we have roots everywhere
+                and
+                love travelling and culture.
+              </p>
+              <p>
+                Before settling in Spain with our three children we lived in Thailand, which has given us our love and
+                taste for Thai and Asian dishes. Johan is a professional chef and has run big kitchens in Holland, now
+                he
+                puts together the things he loves the most on a plate to share with everyone. Jeannette is an incredible
+                hostess; friendly and heartwarming - she also has a magical touch in the kitchen and baking cakes and
+                sweets. We would love to welcome you into what we call our Home.
+              </p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-    <!-- OUR FOOD -->
-    <!-- Desktop & mobile -->
-    <ion-grid class="section">
-      <h1>Our Food</h1>
-      <ion-row *ngFor="let foodItem of foodImages">
-        <ion-col size-lg="6" size-xs="12"
-          style="align-items: center; display: flex; justify-content: center; text-align: center;">
-          {{foodItem[1]}}
-        </ion-col>
-        <ion-col size-lg="6" size-xs="12">
-          <div class="foodImageItem">
-            <div style="align-items: center; display: flex; justify-content: center;">
-              <ion-img src="{{foodItem[0]}}" style="width: 70%; height: auto;"></ion-img>
-              <div class="overlay" [hidden]="devWidth < 992">
-                <h3>{{foodItem[1]}}</h3>
+      <!-- OUR FOOD -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section">
+        <h1>our Food</h1>
+        <ion-row *ngFor="let foodItem of foodImages">
+          <ion-col size-lg="6" size-xs="12"
+            style="align-items: center; display: flex; justify-content: center; text-align: center;">
+            <div>
+              <h2>{{foodItem[1]}}</h2>
+              <p> {{foodItem[2]}}</p>
+            </div>
+          </ion-col>
+          <ion-col size-lg="6" size-xs="12">
+            <div class="foodImageItem">
+              <div style="align-items: center; display: flex; justify-content: center;">
+                <ion-img src="{{foodItem[0]}}" style="width: 70%; height: auto;"></ion-img>
+                <div class="overlay" [hidden]="devWidth < 992">
+                  <h3>{{foodItem[3]}}</h3>
+                </div>
               </div>
             </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- HOURS -->
+      <ion-grid class="section" style="background-color: transparent;">
+        <div style="text-align: center; position: relative;">
+          <img src="../../assets/images/sign.png" class="opening-sign">
+          <div class="opening-text">
+            <h1>opening hours</h1>
+            <h2>MON - SUN: 12:00-18:00</h2>
+            <h3>Closed when it rains ;)</h3>
           </div>
-        </ion-col>
-      </ion-row>
+        </div>
+      </ion-grid>
+
+      <!-- WHERE TO FIND US -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section map">
+        <ion-row>
+          <!-- Map -->
+          <ion-col size-lg="6" size-xs="12" style="text-align: center;" class="whereto-col">
+            <h1 class="whereto-title">Where to find us</h1>
+            <p>
+              Paseo Burriana, Nerja
+            </p>
+            <p>
+              Contact us:
+              <a href="tel:+34665454431" class="phone-link">+34 665454431</a>
+            </p>
+          </ion-col>
+          <ion-col size-lg="6" size-xs="12">
+            <iframe width="100%" height="350px" frameborder="0" style="border:0" class="map-frame"
+              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJV7BGigglcg0Rvd4o9UOhzG8&key=AIzaSyAWfbOmJcSmbBXAExmsdwQKAchR2tBJb4k"
+              allowfullscreen></iframe>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     </ion-grid>
 
-    <!-- HOURS -->
-    <ion-grid class="section">
-      <div style="text-align: center; position: relative;">
-        <img src="../../assets/images/sign.png" class="opening-sign">
-        <div class="opening-text">
-        <h1>Opening Hours</h1>
-        <h2>MON - SUN: 12:00-18:00</h2>
-        <h3>Closed when it rains ;)</h3>
-      </div>
-      </div>
-    </ion-grid>
+    <!-- Footer  -->
+    <!-- SOCIAL MEDIA -->
 
-    <!-- WHERE TO FIND US -->
-    <!-- Desktop & mobile -->
-    <ion-grid class="section map">
-      <ion-row>
-        <!-- Map -->
-        <ion-col size-lg="6" size-xs="12" style="text-align: center;">
-          <h1>Where to find us</h1>
-          <p>
-            Paseo Burriana, Nerja
-          </p>
-          <p>
-            +34 665454431
-          </p>
-        </ion-col>
-        <ion-col size-lg="6" size-xs="12">
-          <iframe width="100%" height="100%" frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJV7BGigglcg0Rvd4o9UOhzG8&key=AIzaSyAWfbOmJcSmbBXAExmsdwQKAchR2tBJb4k"
-            allowfullscreen></iframe>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <ion-footer class="ion-no-border">
+      <ion-toolbar color="medium"
+        style="align-items: center; display: flex; justify-content: center; text-align: center;">
+        <br>
+        <ion-button href="https://www.facebook.com/TapasPlazaNerja/" fill="clear" color="light">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button
+          href="https://www.google.com/maps/place/Tapas+Plaza/@36.7506407,-3.8698905,17z/data=!3m1!4b1!4m5!3m4!1s0xd7225088a46b057:0x6fcca143f528debd!8m2!3d36.7506407!4d-3.8677018"
+          fill="clear" color="light">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-button>
+        <ion-button
+          href="https://www.tripadvisor.com/Restaurant_Review-g315917-d1477947-Reviews-Tapas_Plaza-Nerja_Costa_del_Sol_Province_of_Malaga_Andalucia.html"
+          fill="clear" color="light">
+          <img height="32" width="32" src="../../assets/icon/tripadvisor.svg" />
+        </ion-button>
+        <p>
+          Est. 2006
+        </p>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
 
-  </ion-grid>
-
-  <!-- Footer  -->
-  <!-- SOCIAL MEDIA -->
-
-  <ion-footer class="ion-no-border">
-    <ion-toolbar color="medium"
-      style="align-items: center; display: flex; justify-content: center; text-align: center;">
-      <br>
-      <ion-button href="https://www.facebook.com/TapasPlazaNerja/" fill="clear" color="light">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </ion-button>
-      <ion-button
-        href="https://www.google.com/maps/place/Tapas+Plaza/@36.7506407,-3.8698905,17z/data=!3m1!4b1!4m5!3m4!1s0xd7225088a46b057:0x6fcca143f528debd!8m2!3d36.7506407!4d-3.8677018"
-        fill="clear" color="light">
-        <ion-icon name="logo-google"></ion-icon>
-      </ion-button>
-      <ion-button
-        href="https://www.tripadvisor.com/Restaurant_Review-g315917-d1477947-Reviews-Tapas_Plaza-Nerja_Costa_del_Sol_Province_of_Malaga_Andalucia.html"
-        fill="clear" color="light">
-        <img height="32" width="32" src="../../assets/icon/tripadvisor.svg" />
-      </ion-button>
-      <p>
-        Est. 2006
-      </p>
-    </ion-toolbar>
-  </ion-footer>
 </ion-content>
