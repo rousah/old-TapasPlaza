@@ -15,9 +15,9 @@ export class Tab1Page {
   public devWidth = this.platform.width();
 
   public imageLinks = [
-    "./assets/images/slide1.jpg",
-    "./assets/images/slide2.jpg",
-    "./assets/images/slide3.jpg",
+    "./assets/images/slides/slide1.jpg",
+    "./assets/images/slides/slide2.jpg",
+    "./assets/images/slides/slide3.jpg",
   ]
 
   foodImages = [["./assets/images/food/salads.JPG",

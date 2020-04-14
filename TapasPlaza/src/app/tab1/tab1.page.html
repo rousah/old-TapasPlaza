@@ -46,32 +46,34 @@
               </ion-slides>
             </div>
           </ion-col>
-          <p>
-            Expect a warm welcome
-            from Giovanni, Jeannette or Jaume, in this family business. We offer fresh Asian Food Specialties,
-            Vegetarian,
-            Middle
-            Eastern and Mediterranean tapas! Chefs Choice Tapas platter, a Spanish Selection and an Asian mix. Babi
-            Ketjap,
-            Sateh, Nasi, Quiche, Feta or Salads? We‘ve got it all!
-          </p>
-          <p>
-            Don’t expect Fast Food, for even our burger is fresh from
-            scratch! Reserve a table or try your luck and have a foodie experience while watching the ☀️ pass by above
-            the
-            sea, for we are only open when it shines!
-          </p>
-          <p>
-            Have a drink and a bite on our open air terrace. You will not regret
-            it, add yourself to our extended client list.
-          </p>
+          <div style="text-align: center">
+            <p>
+              Expect a warm welcome
+              from Giovanni, Jeannette or Jaume, in this family business. We offer fresh Asian Food Specialties,
+              Vegetarian,
+              Middle
+              Eastern and Mediterranean tapas! Chefs Choice Tapas platter, a Spanish Selection and an Asian mix. Babi
+              Ketjap,
+              Sateh, Nasi, Quiche, Feta or Salads? We‘ve got it all!
+            </p>
+            <!-- ORDER NOW -->
+            <div class="ion-padding" [hidden]="devWidth > 992">
+              <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
+            </div>
+            <p>
+              Don’t expect Fast Food, for even our burger is fresh from
+              scratch! Reserve a table or try your luck and have a foodie experience while watching the ☀️ pass by above
+              the
+              sea, for we are only open when it shines!
+            </p>
+            <p>
+              Have a drink and a bite on our open air terrace. You will not regret
+              it, add yourself to our extended client list.
+            </p>
+          </div>
         </ion-row>
 
       </ion-grid>
-      <!-- ORDER NOW -->
-      <div class="ion-padding" [hidden]="devWidth > 992">
-        <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
-      </div>
 
 
       <!-- ABOUT US -->
@@ -109,17 +111,17 @@
       <ion-grid class="section">
         <h1>our Food</h1>
         <ion-row *ngFor="let foodItem of foodImages">
-          <ion-col size-lg="6" size-xs="12"
+          <ion-col size-lg="7" size-xs="12"
             style="align-items: center; display: flex; justify-content: center; text-align: center;">
             <div>
               <h2>{{foodItem[1]}}</h2>
               <p> {{foodItem[2]}}</p>
             </div>
           </ion-col>
-          <ion-col size-lg="6" size-xs="12">
+          <ion-col size-lg="5" size-xs="12">
             <div class="foodImageItem">
               <div style="align-items: center; display: flex; justify-content: center;">
-                <ion-img src="{{foodItem[0]}}" style="width: 70%; height: auto;"></ion-img>
+                <ion-img src="{{foodItem[0]}}" class="foodimage"></ion-img>
                 <div class="overlay" [hidden]="devWidth < 992">
                   <h3>{{foodItem[3]}}</h3>
                 </div>
@@ -133,11 +135,6 @@
       <ion-grid class="section" style="background-color: transparent;">
         <div style="text-align: center; position: relative;">
           <img src="../../assets/images/sign.png" class="opening-sign">
-          <div class="opening-text">
-            <h1>opening hours</h1>
-            <h2>MON - SUN: 12:00-18:00</h2>
-            <h3>Closed when it rains ;)</h3>
-          </div>
         </div>
       </ion-grid>
 
