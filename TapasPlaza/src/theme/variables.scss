@@ -255,8 +255,32 @@ $grid-breakpoints: (
 }
 
 @font-face {
-  font-family: 'Chivo';
+  font-family: 'Andale';
   src: url('../assets/fonts/Andale\ Mono.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Varela';
+  src: url('../assets/fonts/VarelaRound-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Baloo';
+  src: url('../assets/fonts/BalooPaaji2-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ZillaSlab';
+  src: url('../assets/fonts/ZillaSlab-Medium.ttf');
   font-weight: normal;
 }
 
@@ -265,5 +289,9 @@ h1 {
 }
 
 * {
-  font-family: 'Chivo'
+  //font-family: 'Ubuntu'
+  //font-family: 'Varela'
+  //font-family: 'Baloo'
+  font-family: 'Andale'
+  //font-family: 'ZillaSlab'
 }

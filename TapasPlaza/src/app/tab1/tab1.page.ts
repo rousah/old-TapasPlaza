@@ -72,10 +72,13 @@ export class Tab1Page {
   }
 
   async openModal() {
-    const modal = await this.modalController.create({
-      component: Tab2Page,
-      cssClass: 'my-custom-modal'
-    });
-    return await modal.present();
+    if (this.devWidth > 992) {
+      const modal = await this.modalController.create({
+        component: Tab2Page,
+        cssClass: 'my-custom-modal'
+      });
+      return await modal.present();
+    }
+    else this.order()
   }
 }

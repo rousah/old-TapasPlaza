@@ -72,7 +72,16 @@
             </p>
           </div>
         </ion-row>
+      </ion-grid>
 
+      <!-- ORDER ONLINE -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section bg-color" style="align-items: center; display: flex; justify-content: center;">
+        <div style="text-align: center;">
+          <h1>You can now order online & get real-time confirmation!</h1>
+          <ion-button size="large" color="secondary" (click)="openModal()">See menu & order now!</ion-button>
+          <h2>For take-away & home delivery!</h2>
+        </div>
       </ion-grid>
 
 
@@ -109,7 +118,7 @@
       <!-- OUR FOOD -->
       <!-- Desktop & mobile -->
       <ion-grid class="section">
-        <h1>our Food</h1>
+        <h1>Our Food</h1>
         <ion-row *ngFor="let foodItem of foodImages">
           <ion-col size-lg="7" size-xs="12"
             style="align-items: center; display: flex; justify-content: center; text-align: center;">
@@ -118,10 +127,10 @@
               <p> {{foodItem[2]}}</p>
             </div>
           </ion-col>
-          <ion-col size-lg="5" size-xs="12">
+          <ion-col size-lg="5" size-xs="12" style="margin-bottom: 2rem;">
             <div class="foodImageItem">
               <div style="align-items: center; display: flex; justify-content: center;">
-                <ion-img src="{{foodItem[0]}}" class="foodimage"></ion-img>
+                <img src="{{foodItem[0]}}" class="foodimage">
                 <div class="overlay" [hidden]="devWidth < 992">
                   <h3>{{foodItem[3]}}</h3>
                 </div>
@@ -140,18 +149,26 @@
 
       <!-- WHERE TO FIND US -->
       <!-- Desktop & mobile -->
-      <ion-grid class="section map">
+      <ion-grid class="section bg-color">
         <ion-row>
           <!-- Map -->
           <ion-col size-lg="6" size-xs="12" style="text-align: center;" class="whereto-col">
             <h1 class="whereto-title">Where to find us</h1>
             <p>
-              Paseo Burriana, Nerja
+              Paseo Burriana, Nerja <br>
+              Come visit us or order online:
             </p>
-            <p>
-              Contact us:
-              <a href="tel:+34665454431" class="phone-link">+34 665454431</a>
-            </p>
+            <ion-button color="secondary" (click)="openModal()">See menu & order now!</ion-button>
+            <h2>Contact us</h2>
+
+            <h5>Order or booking info:</h5>
+
+            <a href="tel:+34621011056" class="phone-link">+34 621011056</a>
+
+            <h5> Business inquiries:</h5>
+
+            <a href="tel:+34665454431" class="phone-link">+34 665454431</a>
+
           </ion-col>
           <ion-col size-lg="6" size-xs="12">
             <iframe width="100%" height="350px" frameborder="0" style="border:0" class="map-frame"
@@ -183,6 +200,7 @@
           fill="clear" color="light">
           <img height="32" width="32" src="../../assets/icon/tripadvisor.svg" />
         </ion-button>
+        <ion-button color="secondary" (click)="openModal()">See menu & order now!</ion-button>
         <p>
           Est. 2006
         </p>
