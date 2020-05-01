@@ -48,27 +48,22 @@
           </ion-col>
           <div style="text-align: center">
             <p>
-              Expect a warm welcome
-              from Giovanni, Jeannette or Jaume, in this family business. We offer fresh Asian Food Specialties,
-              Vegetarian,
-              Middle
-              Eastern and Mediterranean tapas! Chefs Choice Tapas platter, a Spanish Selection and an Asian mix. Babi
-              Ketjap,
-              Sateh, Nasi, Quiche, Feta or Salads? We‘ve got it all!
+              Sharing and tasting, that's how to enjoy tapas. Plates go around the table. You have a little bit(e) of
+              this, a little taste of that. It's fun. Brings people together. Feels more like having a party, rather
+              than just a meal.
             </p>
             <!-- ORDER NOW -->
             <div class="ion-padding" [hidden]="devWidth > 992">
               <ion-button expand="block" (click)="order()">See menu & order now!</ion-button>
             </div>
             <p>
-              Don’t expect Fast Food, for even our burger is fresh from
-              scratch! Reserve a table or try your luck and have a foodie experience while watching the ☀️ pass by above
-              the
-              sea, for we are only open when it shines!
+              The popularity of our Tapas Plates show that people love it. Each Plate comes with a
+              nice selection of bites. You can go for Spanish, Asian, Vegetarian or even Gluten-free!
             </p>
             <p>
-              Have a drink and a bite on our open air terrace. You will not regret
-              it, add yourself to our extended client list.
+              Our famous Thai
+              and Indonesian food is also best eaten tapa-style. Like our Indonesian 'Rice Table'! Absolutely lovely,
+              all this delish right in front of you to pick from, yummie!
             </p>
           </div>
         </ion-row>
@@ -84,41 +79,10 @@
         </div>
       </ion-grid>
 
-
-      <!-- ABOUT US -->
-      <!-- Desktop & mobile -->
-      <ion-grid class="section">
-        <h1>About Us</h1>
-        <ion-row>
-          <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
-            <img src="../../assets/images/aboutus.jpg" class="about-us-img">
-          </ion-col>
-          <ion-col size-md="6" size-xs="12"
-            style="align-items: center; display: flex; justify-content: center; text-align: center;">
-            <div>
-              <p>
-                We are Johan & Jeannette and have been running our restaurant since 2013, previously known as 'Sabor de
-                Amor'! We are Dutch but we like to call ourselves 'people of the Earth' because we have roots everywhere
-                and
-                love travelling and culture.
-              </p>
-              <p>
-                Before settling in Spain with our three children we lived in Thailand, which has given us our love and
-                taste for Thai and Asian dishes. Johan is a professional chef and has run big kitchens in Holland, now
-                he
-                puts together the things he loves the most on a plate to share with everyone. Jeannette is an incredible
-                hostess; friendly and heartwarming - she also has a magical touch in the kitchen and baking cakes and
-                sweets. We would love to welcome you into what we call our Home.
-              </p>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
       <!-- OUR FOOD -->
       <!-- Desktop & mobile -->
       <ion-grid class="section">
-        <h1>Our Food</h1>
+        <h1>Our Tapas = Your Party</h1>
         <ion-row *ngFor="let foodItem of foodImages">
           <ion-col size-lg="7" size-xs="12"
             style="align-items: center; display: flex; justify-content: center; text-align: center;">
@@ -135,6 +99,48 @@
                   <h3>{{foodItem[3]}}</h3>
                 </div>
               </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- Review -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section" style="text-align: center;">
+        <i style="font-size: large;">"So glad to have found you, at last something different!"</i><br><br>
+        Many times we've heard this relief. Must have something to do with:
+        Our tapas are fresh from sratch. They're healthy & light. They're international. We have vegetarian options and
+        many options for people with allergies and intolerances. Our tapas are your party!
+      </ion-grid>
+
+      <!-- ABOUT US -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section">
+        <h1>Encantado</h1>
+        <ion-row>
+          <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
+            <img src="../../assets/images/aboutus.jpg" class="about-us-img">
+          </ion-col>
+          <ion-col size-md="6" size-xs="12"
+            style="align-items: center; display: flex; justify-content: center; text-align: center;">
+            <div>
+              <p>
+                We are Jeannette and Johan. Nice to meet you!
+                With our children Giovanni, Rosa and Jaume we left Holland to open our eatery in Nerja in 2006.
+                Previously known as 'Sabor de Amor'́.
+              </p>
+              <p>
+                Where Jeannette has a magic touch with people, Johan has with the Wok.
+                As a heartwarming hostess and a qualified and passionate chef, we'd love to welcome you into what we
+                call our Home!
+              </p>
+              <p>
+                Before we had children, we traveled a lot. And we lived in Thailand. The food we picked up from all
+                these travels, we now bring to your table.
+                So there you are, on our always sunny terrace overlooking the Mediterranean. Jeannette makes you feel at
+                home. You guys chat away as if you've known eachother for years. Your food arrives. You inmediately
+                taste the love chef Johan put in it...
+              </p>
             </div>
           </ion-col>
         </ion-row>
@@ -175,6 +181,19 @@
               src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJV7BGigglcg0Rvd4o9UOhzG8&key=AIzaSyAWfbOmJcSmbBXAExmsdwQKAchR2tBJb4k"
               allowfullscreen></iframe>
           </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- THANK YOU -->
+      <!-- Desktop & mobile -->
+      <ion-grid class="section" style="text-align: center;">
+        <h1>Muchísimas Gracias</h1>
+        <ion-row>
+          <p>
+            Dear guests, we so much appreciate your loyalty. Some of you have even been with us since the day we
+            opened in 2006!!!
+            Without your support we would never have been where we are now!
+            A popular spot well known for our fresh home cooking.
         </ion-row>
       </ion-grid>
 

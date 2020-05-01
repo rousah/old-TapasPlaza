@@ -26,8 +26,8 @@ export class Tab1Page {
     "Feta Salad"
   ],
   ["./assets/images/food/asian.JPG",
-    "Asian",
-    "Asian cuisine includes several major regional cuisines: Central Asian, East Asian, North Asian, South Asian, Southeast Asian, and West Asian. ... Ingredients common to many cultures in the East and Southeast regions of the continent include rice, ginger, garlic, sesame seeds, chilies, dried onions, soy, and tofu.",
+    "Our Asian Touch",
+    "“You being Dutch, how come your Thai tastes better than my local at home!?” People ask this all the time. All we can say is this. When we lived in Thailand, Thai chefs taught us their secrets. How they juggle all flavours, textures and colours the Thai cuisine is so famous for. That's our reference. Ever since we cook till it tastes exactly like how it did back there. That's how we got here. So when our food brings you back to Thailand And you find yourself on this Tropical Beach And you ask yourself: “How did I get here?” Then our mission is accomplished...",
     "Nasi Goreng Special"
   ],
   ["./assets/images/food/breakfast.JPG",
@@ -40,12 +40,6 @@ export class Tab1Page {
     "Candy, also called sweets (British English) or lollies (Australian English, New Zealand English), is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy.",
     "Homemade chocolate muffins"
   ],
-  ]
-
-  public foodTexts = [
-    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
-    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
-    "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.",
   ]
 
   slideOptions = {
