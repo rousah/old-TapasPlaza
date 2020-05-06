@@ -20,22 +20,22 @@ export class Tab1Page {
     "./assets/images/slides/slide3.jpg",
   ]
 
-  foodImages = [["./assets/images/food/salads.JPG",
+  foodImages = [["./assets/images/food/salads.jpg",
     "Salads",
     "A salad is a dish consisting of a mixture of small pieces of food, usually vegetables or fruit. The sauce used to flavor a salad is commonly called a salad dressing; most salad dressings are based on either a mixture of oil and vinegar or a fermented milk product like kefir.",
     "Feta Salad"
   ],
-  ["./assets/images/food/asian.JPG",
+  ["./assets/images/food/asian.jpg",
     "Our Asian Touch",
     "“You being Dutch, how come your Thai tastes better than my local at home!?” People ask this all the time. All we can say is this. When we lived in Thailand, Thai chefs taught us their secrets. How they juggle all flavours, textures and colours the Thai cuisine is so famous for. That's our reference. Ever since we cook till it tastes exactly like how it did back there. That's how we got here. So when our food brings you back to Thailand And you find yourself on this Tropical Beach And you ask yourself: “How did I get here?” Then our mission is accomplished...",
     "Nasi Goreng Special"
   ],
-  ["./assets/images/food/breakfast.JPG",
+  ["./assets/images/food/breakfast.jpg",
     "Breakfast",
     "The definition of breakfast is a morning meal, or the first meal of the day. Eggs and bacon that you eat first thing in the morning for your first meal is an example of breakfast.",
     "Fresh OJ & homemade waffles"
   ],
-  ["./assets/images/food/sweets.JPG",
+  ["./assets/images/food/sweets.jpg",
     "Sweets",
     "Candy, also called sweets (British English) or lollies (Australian English, New Zealand English), is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy.",
     "Homemade chocolate muffins"

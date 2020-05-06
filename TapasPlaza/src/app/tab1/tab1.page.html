@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" [hidden]="devWidth > 992">
   <ion-toolbar>
     <ion-title style="text-align: center;">
-      <ion-img  src="../../assets/icon/tp-logo.png" style="padding: 1rem;">
+      <ion-img  src="../../assets/icon/tp-logo.png" style="padding: 1rem;"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -34,14 +34,14 @@
         <!-- Desktop -->
         <ion-row>
           <ion-col size-lg="4" *ngFor="let imageurl of imageLinks" [hidden]="devWidth < 992">
-            <ion-img src={{imageurl}} />
+            <ion-img src={{imageurl}} ></ion-img>
           </ion-col>
           <!-- Mobile -->
           <ion-col [hidden]="devWidth > 992">
             <div class="carrousel-photos">
               <ion-slides pager="true" [options]="slideOptions" class="carrousel-photos">
                 <ion-slide *ngFor="let imageurl of imageLinks">
-                  <ion-img src={{imageurl}} />
+                  <ion-img src={{imageurl}} ></ion-img>
                 </ion-slide>
               </ion-slides>
             </div>
@@ -94,7 +94,7 @@
           <ion-col size-lg="5" size-xs="12" style="margin-bottom: 2rem;">
             <div class="foodImageItem">
               <div style="align-items: center; display: flex; justify-content: center;">
-                <ion-img src="{{foodItem[0]}}" class="foodimage">
+                <ion-img src="{{foodItem[0]}}" class="foodimage"></ion-img>
                 <div class="overlay" [hidden]="devWidth < 992">
                   <h3>{{foodItem[3]}}</h3>
                 </div>
@@ -119,7 +119,7 @@
         <h1>Encantado</h1>
         <ion-row>
           <ion-col size-md="6" size-xs="12" style="align-items: center; display: flex; justify-content: center;">
-            <ion-img src="../../assets/images/aboutus.jpg" class="about-us-img">
+            <ion-img src="../../assets/images/aboutus.jpg" class="about-us-img"></ion-img>
           </ion-col>
           <ion-col size-md="6" size-xs="12"
             style="align-items: center; display: flex; justify-content: center; text-align: center;">
@@ -150,7 +150,7 @@
       <!-- HOURS -->
       <ion-grid class="section" style="background-color: transparent;">
         <div style="text-align: center; position: relative;" itemprop="openingHours" content="Mo-Su 09:30-22:00">
-          <ion-img src="../../assets/images/sign.png" class="opening-sign">
+          <img src="../../assets/images/sign.png" class="opening-sign"/>
         </div>
       </ion-grid>
 
@@ -221,7 +221,7 @@
         <ion-button
           href="https://www.tripadvisor.com/Restaurant_Review-g315917-d1477947-Reviews-Tapas_Plaza-Nerja_Costa_del_Sol_Province_of_Malaga_Andalucia.html"
           fill="clear" color="light">
-          <ion-img height="32" width="32" src="../../assets/icon/tripadvisor.svg" />
+          <img height="32" width="32" src="../../assets/icon/tripadvisor.svg" />
         </ion-button>
         <ion-button color="secondary" (click)="openModal()">See menu & order now!</ion-button>
         <p>
