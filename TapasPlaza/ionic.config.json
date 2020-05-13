@@ -1,7 +1,0 @@
-{
-  "name": "TapasPlaza",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

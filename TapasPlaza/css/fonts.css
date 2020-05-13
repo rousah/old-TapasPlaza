@@ -1,0 +1,51 @@
+/* --------------- */
+/* ---- Fonts ---- */
+/* --------------- */
+
+@font-face {
+    font-family: "American Typewriter Bold";
+    src: url("../fonts/AmericanTypewriter-Bold-03.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "American Typewriter Normal";
+    src: url("../fonts/AmericanTypewriter-01.ttf");
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Andale";
+    src: url("../fonts/Andale\ Mono.ttf");
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Regular.ttf");
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Varela";
+    src: url("../fonts/VarelaRound-Regular.ttf");
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url("../fonts/BalooPaaji2-Regular.ttf");
+    font-weight: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "ZillaSlab";
+    src: url("../fonts/ZillaSlab-Medium.ttf");
+    font-weight: normal;
+    font-display: fallback;
+}

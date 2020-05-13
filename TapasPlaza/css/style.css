@@ -1,0 +1,104 @@
+* {
+    font-family: "Andale";
+}
+body {
+    background-color: #eaf5f7;
+}
+section {
+    padding: 25px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+h1 {
+    font-family: "American Typewriter Bold";
+    margin-top: 20px;
+    font-size: 26px;
+}
+h2 {
+    margin-top: 18px;
+    font-size: 24px;
+}
+h3 {
+    font-size: 22px;
+}
+p {
+    font-family: "Andale";
+}
+.phone-link {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}
+.navbar-brand {
+    font-family: "American Typewriter Bold";
+}
+.header {
+    --background: none;
+    background-image: url("../header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 3rem;
+}
+#carousel{
+    display: none;
+}
+.image-grid{
+    display: flex;
+}
+@media only screen and (max-width: 992px) {
+    .header {
+        display: none !important;
+    }
+    #about{
+        margin-top: 50px;
+    }
+    #carousel{
+        display: flex;
+    }
+    .image-grid{
+        display: none;
+    }
+}
+.header h1 {
+    font-family: "American Typewriter Bold";
+    text-transform: lowercase;
+    font-size: 7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 20px;
+}
+.header h3 {
+    font-family: "Andale";
+}
+.content {
+    text-align: center;
+}
+.content-white {
+    background-color: white;
+}
+.content-green {
+    background-color: #a4c0c4;
+}
+.main-button {
+    background-color: #008094;
+}
+#order h2 {
+    font-family: "Andale";
+}
+#time img {
+    width: 50%;
+}
