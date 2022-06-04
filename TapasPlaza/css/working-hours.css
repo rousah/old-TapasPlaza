@@ -1,0 +1,10 @@
+.calculator {
+    position: relative;
+    margin-top: 56px;
+    font-family: "Andale" !important;
+}
+
+.cc__buttonGroup-question-button {
+    border-radius: 20px;
+    padding: 50px;
+}
